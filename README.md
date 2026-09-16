@@ -1,1 +1,1 @@
-# Automated-Warehouse-Sorter-System-Digital-Logic-Simulation
+# Automated Warehouse Sorter
