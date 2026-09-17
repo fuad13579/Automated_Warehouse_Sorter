@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" role="img" aria-labelledby="title description">
+  <title id="title">Automated Warehouse Sorter circuit overview</title>
+  <desc id="description">A block diagram showing package input, conveyor stages, classification and routing, and storage zones A, B, and C.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 34px Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #475569; }
+      .box { fill: #ffffff; stroke: #2563eb; stroke-width: 3; rx: 16; }
+      .storage { fill: #eff6ff; stroke: #2563eb; stroke-width: 3; rx: 16; }
+      .label { font: 700 22px Arial, sans-serif; fill: #1e3a8a; text-anchor: middle; }
+      .body { font: 16px Arial, sans-serif; fill: #334155; text-anchor: middle; }
+      .wire { stroke: #2563eb; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+      .wire-reject { stroke: #dc2626; stroke-width: 5; fill: none; marker-end: url(#arrow-red); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/></marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/></marker>
+  </defs>
+  <rect class="bg" width="1200" height="640" rx="24"/>
+  <text class="title" x="600" y="62" text-anchor="middle">Automated Warehouse Sorter</text>
+  <text class="subtitle" x="600" y="94" text-anchor="middle">Proteus digital-logic simulation overview</text>
+  <rect class="box" x="55" y="250" width="195" height="130"/>
+  <text class="label" x="152" y="298">Package Input</text>
+  <text class="body" x="152" y="330">D1, D0, P</text>
+  <text class="body" x="152" y="354">LOAD / RESET</text>
+  <rect class="box" x="330" y="250" width="225" height="130"/>
+  <text class="label" x="442" y="298">Conveyor</text>
+  <text class="body" x="442" y="330">Registered stages</text>
+  <text class="body" x="442" y="354">S1 → S4</text>
+  <rect class="box" x="635" y="250" width="230" height="130"/>
+  <text class="label" x="750" y="298">Classification</text>
+  <text class="body" x="750" y="330">Destination decode</text>
+  <text class="body" x="750" y="354">Capacity validation</text>
+  <path class="wire" d="M250 315 H330"/>
+  <path class="wire" d="M555 315 H635"/>
+  <rect class="storage" x="950" y="125" width="190" height="100"/>
+  <text class="label" x="1045" y="166">Storage A</text>
+  <text class="body" x="1045" y="196">COUNT / FREE</text>
+  <rect class="storage" x="950" y="270" width="190" height="100"/>
+  <text class="label" x="1045" y="311">Storage B</text>
+  <text class="body" x="1045" y="341">COUNT / FREE</text>
+  <rect class="storage" x="950" y="415" width="190" height="100"/>
+  <text class="label" x="1045" y="456">Storage C</text>
+  <text class="body" x="1045" y="486">COUNT / FREE</text>
+  <path class="wire" d="M865 285 C910 285 905 175 950 175"/>
+  <path class="wire" d="M865 315 H950"/>
+  <path class="wire" d="M865 345 C910 345 905 465 950 465"/>
+  <path class="wire-reject" d="M750 380 V550 H1020"/>
+  <text x="1040" y="558" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#dc2626">REJECT</text>
+  <text class="subtitle" x="600" y="604" text-anchor="middle">Each storage zone accepts up to three valid packages.</text>
+</svg>

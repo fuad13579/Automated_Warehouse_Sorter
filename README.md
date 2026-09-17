@@ -6,8 +6,7 @@ Each zone holds a maximum of **3 packages**. The system rejects packages with in
 
 ## Circuit Preview
 
-<!-- Upload your circuit screenshot to this path. -->
-![Integrated circuit](images/full-circuit.png)
+![Warehouse sorter circuit overview](images/full-circuit.svg)
 
 ## Features
 
@@ -167,9 +166,8 @@ Possible extensions include input queues, priority-based scheduling, controlled 
 
 ### Version 1.0
 
-- [Fuad BIN Sattar] — [STORAGE & CAPACITY]
-- [Tahmeed Ahmed] — [CLASSIFICATION & ROUTING]
-- [Addin Naim Robin] — [INPUT & CONVEYOR]
+- Fuad BIN Sattar — STORAGE & CAPACITY
+- Tahmeed Ahmed — CLASSIFICATION & ROUTING
+- Addin Naim Robin — INPUT & CONVEYOR
 
 ## Testing
-
