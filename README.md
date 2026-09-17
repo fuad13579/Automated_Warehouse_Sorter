@@ -165,7 +165,7 @@ Possible extensions include input queues, priority-based scheduling, controlled 
 
 ## Team
 
-# Version 1.0
+### Version 1.0
 
 - [Fuad BIN Sattar] — [STORAGE & CAPACITY]
 - [Tahmeed Ahmed] — [CLASSIFICATION & ROUTING]
