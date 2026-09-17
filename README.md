@@ -6,7 +6,7 @@ Each zone holds a maximum of **3 packages**. The system rejects packages with in
 
 ## Circuit Preview
 
-![Warehouse sorter circuit overview](images/full-circuit.svg)
+![Warehouse sorter circuit](<images/Full_Circuit%20(v1.0).png>)
 
 ## Features
 
@@ -29,6 +29,42 @@ Each zone holds a maximum of **3 packages**. The system rejects packages with in
 | **M3 — Storage & Capacity** | Updates storage counts, calculates remaining space, generates FULL feedback and completion |
 
 All sequential components use one shared rising-edge clock.
+
+## Architecture Flowchart
+
+```mermaid
+flowchart LR
+    I[Package inputs<br/>D1, D0, P, LOAD, RESET, CLK]
+
+    subgraph M1[Module 1 — Input and Conveyor]
+        C[Capture package data]
+        V[Advance conveyor<br/>S1 → S4 and BUSY]
+    end
+
+    subgraph M2[Module 2 — Classification and Routing]
+        D[Decode destination]
+        Q{Valid destination?}
+        K{Selected zone<br/>has capacity?}
+        R[Register route<br/>A, B or C]
+    end
+
+    subgraph M3[Module 3 — Storage and Capacity]
+        U[Increment selected count]
+        F[Update FREE and FULL]
+    end
+
+    X[REJECT]
+    E[DONE]
+    Z[Idle / ready for next package]
+
+    I --> C --> V --> D --> Q
+    Q -- No: 11 --> X --> E
+    Q -- Yes --> K
+    K -- No: zone full --> X
+    K -- Yes --> R --> U --> F --> E
+    E --> Z
+    Z -. LOAD .-> C
+```
 
 ## Inputs
 
